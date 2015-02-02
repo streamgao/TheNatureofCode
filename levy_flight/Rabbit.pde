@@ -36,11 +36,13 @@ class Rabbit{
   
   Rabbit size( int type ){ // later change to switch
     if( type == levyFlight ){   
+       text("Levy\nFlight", width-70,height-100);
        // this is the inverse function of the Mandelbrot function
        // D=2. unit is 10.
        float p = random(1);
-       size = p<0.5122 ? 10*random(0,1.97) : 10*pow( p,-0.5 );      
+       size = p<0.509 ? 10*p/0.26 : 10*1/(1.19-p);    //this is the most valuable of the whole project...  
     }else if( type == totallyRandom ) {
+       text("Totally\nRandom", width-70,height-100);
        size = 60* random(0,1);
     } 
     println("size"+size);
